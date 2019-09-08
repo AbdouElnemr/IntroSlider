@@ -43,7 +43,8 @@ class WelcomeActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         dots = Array<ImageView>(4) { ImageView(this) }
-
+        btnSkip.setOnClickListener(this)
+        btnNext.setOnClickListener(this)
         myPagerAdapter = MyPagerAdapter(layouts, this)
         viewPager.adapter = myPagerAdapter
 
@@ -64,10 +65,10 @@ class WelcomeActivity : AppCompatActivity(), View.OnClickListener {
 
             override fun onPageSelected(position: Int) {
                 creatDots(position)
-                if (position == layouts.size){
+                if (position == layouts.size) {
                     btnNext.text = "Start"
                     btnSkip.visibility = View.INVISIBLE
-                }else{
+                } else {
                     btnNext.text = "Next"
                     btnSkip.visibility = View.VISIBLE
                 }
@@ -119,12 +120,13 @@ class WelcomeActivity : AppCompatActivity(), View.OnClickListener {
         startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
+
     fun loadnextSlide() {
 
-        var nextSlide:Int = viewPager.currentItem+1
-        if (nextSlide<layouts.size){
+        var nextSlide: Int = viewPager.currentItem + 1
+        if (nextSlide < layouts.size) {
             viewPager.setCurrentItem(nextSlide)
-        }else{
+        } else {
             loadMainActivity()
             preferenceManager.writeToPref()
         }
