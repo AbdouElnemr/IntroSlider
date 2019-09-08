@@ -36,7 +36,7 @@ class WelcomeActivity : AppCompatActivity() {
 
 //        dots = Array<ImageView>(4, { ImageView(this, this) })
 //
-//        dots?.size ?: layouts.size
+        dots?.size ?: layouts.size
 
         myPagerAdapter = MyPagerAdapter(layouts, this)
         viewPager.adapter = myPagerAdapter
