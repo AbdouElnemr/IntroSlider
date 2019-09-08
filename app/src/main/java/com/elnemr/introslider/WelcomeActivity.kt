@@ -1,7 +1,10 @@
 package com.elnemr.introslider
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.ImageView
@@ -10,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import kotlinx.android.synthetic.main.activity_welcome.*
 
-class WelcomeActivity : AppCompatActivity() {
+class WelcomeActivity : AppCompatActivity(), View.OnClickListener {
 
     var layouts = arrayOf(
         R.layout.first_slide,
@@ -19,14 +22,19 @@ class WelcomeActivity : AppCompatActivity() {
         R.layout.fourth_slide
     )
     lateinit var myPagerAdapter: MyPagerAdapter
-    // lateinit var dotsLayouts: LinearLayout
-    //lateinit var dots: Array<ImageView>
-
-    val dots = arrayOfNulls<ImageView?>(layouts.size)
+    lateinit var dots: Array<ImageView>
+    lateinit var preferenceManager: PreferenceManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
+
+
+        preferenceManager = PreferenceManager(this)
+        if (preferenceManager.checkPref()) {
+            loadMainActivity()
+        }
+
 
         if (Build.VERSION.SDK_INT >= 19) {
             window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
@@ -34,9 +42,7 @@ class WelcomeActivity : AppCompatActivity() {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         }
 
-//        dots = Array<ImageView>(4, { ImageView(this, this) })
-//
-        dots?.size ?: layouts.size
+        dots = Array<ImageView>(4) { ImageView(this) }
 
         myPagerAdapter = MyPagerAdapter(layouts, this)
         viewPager.adapter = myPagerAdapter
@@ -58,6 +64,13 @@ class WelcomeActivity : AppCompatActivity() {
 
             override fun onPageSelected(position: Int) {
                 creatDots(position)
+                if (position == layouts.size){
+                    btnNext.text = "Start"
+                    btnSkip.visibility = View.INVISIBLE
+                }else{
+                    btnNext.text = "Next"
+                    btnSkip.visibility = View.VISIBLE
+                }
             }
 
         })
@@ -67,8 +80,9 @@ class WelcomeActivity : AppCompatActivity() {
         if (dotsLayout != null)
             dotsLayout.removeAllViews()
 
-        for (i in layouts) {
-            dots[i]= ImageView(this)
+        for (i in 0..layouts.size - 1) {
+            Log.d("MMM", " $i")
+            dots[i] = ImageView(this)
             if (i == currentPosition) {
                 dots[i]?.setImageDrawable(resources.getDrawable(R.drawable.active_dots))
             } else {
@@ -86,4 +100,35 @@ class WelcomeActivity : AppCompatActivity() {
 
         }
     }
+
+    override fun onClick(v: View?) {
+
+        when (v?.id) {
+            R.id.btnNext -> {
+                loadnextSlide()
+
+            }
+            R.id.btnSkip -> {
+                loadMainActivity()
+                preferenceManager.writeToPref()
+            }
+        }
+    }
+
+    fun loadMainActivity() {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
+    }
+    fun loadnextSlide() {
+
+        var nextSlide:Int = viewPager.currentItem+1
+        if (nextSlide<layouts.size){
+            viewPager.setCurrentItem(nextSlide)
+        }else{
+            loadMainActivity()
+            preferenceManager.writeToPref()
+        }
+    }
+
+
 }
