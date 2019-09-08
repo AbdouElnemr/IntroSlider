@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "363642461621",
+    "firebase_url": "https://eduappschool2019.firebaseio.com",
+    "project_id": "eduappschool2019",
+    "storage_bucket": "eduappschool2019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363642461621:android:2eaabbac51874e4c",
+        "android_client_info": {
+          "package_name": "com.codex.eduapp.school"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363642461621-itq8h9ge27dulb6rvn7ac0vjl8fodijg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFRV_nidxK9t95i-GzFhTFTyPjhiVHbXg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">IntroSlider</string>
+
+    <string name="sliderTitle1">Slider 1 Title</string>
+    <string name="sliderDesc1">Slider 1 Description</string>
+
+
+    <string name="sliderTitle2">Slider 2 Title</string>
+    <string name="sliderDesc2">Slider 2 Description</string>
+
+
+    <string name="sliderTitle3">Slider 3 Title</string>
+    <string name="sliderDesc3">Slider 3 Description</string>
+
+
+    <string name="sliderTitle4">Slider 4 Title</string>
+    <string name="sliderDesc4">Slider 4 Description</string>
+
+    <string name="my_preference">"com.abc.com.MyPref"</string>
+    <string name="my_preference_key">"com.abc.com.MyPrefKey"</string>
+
+
+</resources>

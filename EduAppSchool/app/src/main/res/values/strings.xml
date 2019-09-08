@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">EduAppSchool</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="notintnern">No Internet</string>
+    <string name="message">Please Check Your Connection Of Internet and try Again</string>
+    <string name="Ok">OK</string>
+    <string name="chooseType">Hi There ! \n Please Select Account Type</string>
+    <string name="enterphone">Enter Mobile number </string>
+    <string name="enter">Enter Password</string>
+    <string name="forget">Forget Password ? </string>
+    <string name="login">Login</string>
+    <string name="crate">You Do not have An Account , create Now</string>
+    <string name="fullname">Full Name</string>
+    <string name="email">Email</string>
+    <string name="Phonenumber">Phone number</string>
+    <string name="password">Password</string>
+    <string name="signup">Sign UP</string>
+
+    <string name="phonerequired">Please Enter Phone number</string>
+    <string name="phone_number">Phone Number must be 10 digits</string>
+    <string name="passwordreqiured">Password Required</string>
+    <string name="passwordmust">Password  must be more than 6 digits</string>
+    <string name="noitnternt">Not Internet</string>
+    <string name="checknet">Please Check The Internet Connection !!</string>
+    <string name="trfy">Try Again</string>
+    <string name="userreuired">The username is required </string>
+    <string name="usermust">the Username must be maore than 3 characters</string>
+    <string name="emalireuired">The Email is Required</string>
+    <string name="emailsmustbe">The Email Must be As ahmed@gmail.com</string>
+    <string name="reg_mobile_number">Mobile Number</string>
+    <string name="forgot_password">Send </string>
+    <string name="mobile_field_required">Please enter your mobile</string>
+    <string name="RestPassword">Rest Password</string>
+    <string name="derd">IF You Forget Password , Please Enter Your Mobile Number Here , to Rest Your Password .</string>
+    <string name="home">Home Page</string>
+    <string name="Attendence">Attendance</string>
+    <string name="Students">Students</string>
+    <string name="Schedules">Schedules</string>
+    <string name="chooseclasee">Please Choose  Class</string>
+    <string name="pleasesection">Please Choose Section</string>
+    <string name="Pleasedate">Please Choose Date</string>
+    <string name="search">Search</string>
+    <string name="student">Students</string>
+    <string name="pleaseselectsec">Please Select The Section</string>
+
+    <string name="Present">Present</string>
+    <string name="Absent">Absent</string>
+    <string name="Late">Late</string>
+    <string name="Late_with_excuse">Late_with_excuse</string>
+    <string name="Early_Dismissal">Early_Dismissal</string>
+    <string name="Save">Save attendance</string>
+    <string name="selectstudent">Please Select The Students please</string>
+    <string name="Pleaseselct">Please Select Day</string>
+    <string name="Sunday">sunday</string>
+    <string name="Monday">monday</string>
+    <string name="Tuesday">tuesday</string>
+    <string name="Wednesday">wednesday</string>
+    <string name="Thursday">thursday</string>
+    <string name="Friday">friday</string>
+    <string name="Saturday">saturday</string>
+    <array name="aee">
+        <item>saturday</item>
+        <item>sunday</item>
+        <item>monday</item>
+        <item>tuesday</item>
+        <item>wednesday</item>
+        <item>thursday</item>
+        <item>saturday</item>
+    </array>
+    <string name="sarttime">Start Time</string>
+    <string name="endtime">End Time</string>
+    <string name="HomeWork">HomeWork</string>
+    <string name="AddHome">Add HomeWork</string>
+    <string name="hometitle">Homework Title</string>
+    <string name="homedecription">Homework Description</string>
+    <string name="attachemnt">Attachment</string>\
+    <string name="chooseSubject">choose Subject</string>
+    <string name="doneclass">Classes Choosed</string>
+    <string name="donesections">Sections Choosed</string>
+    <string name="selecttitle">Please Select Title</string>
+    <string name="messages">Messages</string>
+</resources>

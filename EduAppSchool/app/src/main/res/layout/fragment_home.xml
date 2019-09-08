@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+    <com.codex.eduapp.school.helper.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:id="@+id/t_title"
+        android:textColor="#FFFFFF"
+        android:text="Student's Leaderboard" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/rec_view"
+        android:visibility="invisible"
+        android:layout_below="@+id/t_title"
+        android:layout_margin="15dp"
+       />
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:layout_below="@id/t_title"
+                android:id="@+id/no_students">
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="15dp"
+                    android:id="@+id/txt"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/no_student_leader"/>
+
+                <com.codex.eduapp.school.helper.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Students "
+                    android:id="@+id/dfg"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="17sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_below="@id/txt"/>
+
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/der"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_below="@id/rec_view"
+                android:background="#FFFFFF"/>
+
+
+            <com.codex.eduapp.school.helper.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/der"
+                android:textSize="15sp"
+                android:id="@+id/t_title1"
+                android:textColor="#FFFFFF"
+                android:text="Teacher's Leaderboard" />
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:layout_below="@id/t_title1"
+                android:id="@+id/no_teachers">
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="15dp"
+                    android:id="@+id/txt1"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/no_student_leader"/>
+
+                <com.codex.eduapp.school.helper.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Teachers "
+                    android:id="@+id/df1g"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="17sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_below="@id/txt1"/>
+
+
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:id="@+id/rec_viewteacher"
+                android:visibility="invisible"
+                android:layout_below="@+id/t_title1"
+                android:layout_margin="15dp"
+                />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

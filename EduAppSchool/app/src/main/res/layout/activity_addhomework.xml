@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".activities.Students">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimaryDark">
+
+        <com.codex.eduapp.school.helper.MyTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/AddHome"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/et_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start"
+            android:src="@drawable/arrow_back" />
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dimen_10">
+
+            <com.codex.eduapp.school.helper.MyEdittext
+                android:id="@+id/t_tilte"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="@dimen/dimen_30"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:layout_marginRight="@dimen/dimen_30"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="@string/hometitle"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp" />
+
+            <com.codex.eduapp.school.helper.MyEdittext
+                android:id="@+id/t_decr"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_below="@id/t_tilte"
+                android:layout_marginLeft="@dimen/dimen_30"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:layout_marginRight="@dimen/dimen_30"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="@string/homedecription"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp" />
+
+            <com.codex.eduapp.school.helper.MyTextView
+                android:id="@+id/t_choosefile"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/t_decr"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/dimen_30"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:background="@drawable/btn_red1"
+                android:gravity="center"
+                android:text="@string/attachemnt"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <com.codex.eduapp.school.helper.MyTextView
+                android:id="@+id/filed"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/t_choosefile"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/dimen_30"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+            <com.codex.eduapp.school.helper.MyTextView
+                android:id="@+id/spiner_clasee"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/filed"
+                android:layout_marginLeft="@dimen/dimen_30"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:layout_marginRight="@dimen/dimen_30"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/chooseclasee"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp" />
+
+            <com.codex.eduapp.school.helper.MyTextView
+                android:id="@+id/spiner_section"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/spiner_clasee"
+                android:layout_marginLeft="@dimen/dimen_30"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:layout_marginRight="@dimen/dimen_30"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="@string/pleaseselectsec"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spiner_subject"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/spiner_section"
+                android:layout_marginLeft="@dimen/dimen_30"
+                android:layout_marginTop="@dimen/dimen_15"
+                android:layout_marginRight="@dimen/dimen_30"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="@string/chooseSubject"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_gray"
+                android:textSize="14sp"
+                app:ms_hint="@string/chooseSubject" />
+
+            <com.codex.eduapp.school.helper.MyTextView
+                android:id="@+id/add_homework"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ff2c7ca3"
+                android:text="@string/AddHome"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:layout_below="@id/spiner_subject"
+                android:layout_marginLeft="@dimen/dimen_30"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:layout_marginRight="@dimen/dimen_30" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

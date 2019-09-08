@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".activities.Students">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimaryDark"
+        >
+        <com.codex.eduapp.school.helper.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/HomeWork"
+            android:textColor="#FFFFFF"
+            android:padding="5dp"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:id="@+id/title"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/et_back"
+            android:layout_gravity="start"
+            android:src="@drawable/arrow_back"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/add_home"
+            android:layout_gravity="end"
+            android:layout_margin="@dimen/dimen_15"
+            android:src="@drawable/ic_add"/>
+
+    </android.support.v7.widget.Toolbar>
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/spineer"
+        android:layout_below="@id/toolbar"
+        app:ms_hint="@string/chooseclasee"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textColorHint="@color/text_gray"
+        app:ms_hint_color="@color/text_gray"
+        android:layout_margin="25dp"/>
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/spineer1"
+        android:layout_below="@id/spineer"
+        app:ms_hint="@string/pleaseselectsec"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textColorHint="@color/text_gray"
+        app:ms_hint_color="@color/text_gray"
+        android:layout_margin="25dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/spineer1"
+        android:layout_margin="@dimen/dimen_10"
+        android:id="@+id/rec_student"
+        tools:listitem="@layout/page_assign_list_item"
+        />
+
+</RelativeLayout>
