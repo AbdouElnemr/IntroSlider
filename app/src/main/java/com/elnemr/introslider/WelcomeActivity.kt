@@ -65,7 +65,7 @@ class WelcomeActivity : AppCompatActivity(), View.OnClickListener {
 
             override fun onPageSelected(position: Int) {
                 creatDots(position)
-                if (position == layouts.size) {
+                if (position == layouts.size-1) {
                     btnNext.text = "Start"
                     btnSkip.visibility = View.INVISIBLE
                 } else {
